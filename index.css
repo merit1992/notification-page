@@ -1,0 +1,134 @@
+*, *::after, *::before {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+:root {
+    --primary_heading: 1.1rem;
+    --primary_paragraph: .9rem;
+
+    --pry_heading_weigth: 700;
+
+    --bg_toggle_color: #0A317C;
+    --primary_span_color: #0A317C;
+    --chess_color: #2C446D;
+    --primary_heading_color: #1A1C28;
+
+    --primary_paragraph_color: #91969D;
+
+    --bd-radius: 5px;
+
+    --notification-btm-spacing: .7em;
+    --notification-bg-col: #F6FAFD;
+
+    --parag-ff: Verdana, Geneva, Tahoma, sans-serif;
+}
+h1,h2,h3,h4,h5,h6 {
+    font-size: var(--primary_heading);
+    color: var(--primary_heading_color);
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+p {
+    color: var(--primary_heading_color);
+}
+.flex {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+/* header style */
+.header_notification, .main_page {
+    width: 95%;
+    margin: 1em auto;  
+}
+.header_not {
+    margin-right: .5em;
+}
+
+.toggle_div {
+    height: 23px;
+    width: 27px;
+    text-align: center;
+    background-color: var(--bg_toggle_color);
+    color: #fff;
+    border-radius: var(--bd-radius);
+}
+.toggle_num {
+    color: #fff;
+    padding: .2em 0;
+}
+.toggle_content {
+    margin: .2em;
+    color: inherit;
+}
+.mark_as_read_btn {
+    border: none;
+    color: var(--primary_paragraph_color);
+    font-size: var(--primary_paragraph);
+    background-color: #fff
+}
+.mark_as_read_btn:hover {
+    color: var(--bg_toggle_color);
+}
+/* main body of the notification */
+.notifications {
+    padding: .5em 1em;
+}
+
+.notifications:nth-child(1), .notifications:nth-child(2), .notifications:nth-child(3), .message {
+    background-color: var(--notification-bg-col);
+    border-radius: var(--bd-radius);
+    margin-bottom: var(--notification-btm-spacing);
+}
+
+.notification_details {
+    width: 85%;
+}
+.img_card, .comment_card  {
+    width: 10%;
+}
+.red_dot {
+    height: 10px;
+    width: 30px;
+    background-color: red;
+    border-radius: 30%;
+}
+.name, .chess_blue {
+    font-size: var(--primary_paragraph);
+    font-family: var(--parag-ff);
+    text-transform: capitalize;
+}
+.name, .tournament {
+    color: var(--primary_heading_color);
+    font-family: var(--parag-ff);
+}
+.tournament, .name, .chess_blue {
+    font-weight: 700;
+}
+.tournament {
+    opacity: .5;
+    font-size: .9rem;
+}
+.message {
+    margin: 1em 0 0;
+    border: 1px solid #f1f1f1;
+    border-radius: 5px;
+    padding: 1em;
+}
+.chess_blue {
+    color: var(--primary_span_color);
+    font-weight: 900;
+}
+.notification_time {
+    opacity: .5;
+}
+
+/* Deal with the font family then proceed to Js/Desktop */
+
+@media (min-width: 40em) {
+    .message {
+        font-size: 1.6rem
+    }
+}
